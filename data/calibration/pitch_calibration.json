@@ -1,0 +1,22 @@
+{
+  "source_frame": "data\\processed\\match_sample2\\frame_000080.jpg",
+  "image_points": [
+    [
+      195,
+      146
+    ],
+    [
+      438,
+      138
+    ],
+    [
+      639,
+      174
+    ],
+    [
+      586,
+      165
+    ]
+  ],
+  "note": "4 points: top-left, top-right, bottom-right, bottom-left of a real rectangle on the pitch. Mapped to a normalized 0-1 unit square, NOT real-world meters (physical pitch dimensions for this footage are not known/confirmed)."
+}
