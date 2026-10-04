@@ -17,3 +17,14 @@ player's actual total is likely split across multiple track_id rows.
 needed) to test whether appearance-based re-identification reduces
 fragmentation versus ByteTrack's motion-only approach - a concrete,
 testable next step, not yet done.
+
+
+**Tested fix:** re-ran tracking with BoT-SORT (`--tracker botsort.yaml`)
+instead of ByteTrack on the same clip. Result: did NOT improve
+fragmentation - BoT-SORT produced 12 track IDs after team
+classification vs. ByteTrack's 11, for the same 4-5 real players.
+Likely cause: BoT-SORT's appearance-based re-identification depends
+on visually distinguishing players, but the specific occlusion case
+in this clip involves two similarly-colored kits - exactly where
+appearance matching has the least signal to work with. This is a
+genuine negative result, not an unexplored option.
