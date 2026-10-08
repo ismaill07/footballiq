@@ -25,3 +25,13 @@ FRAME_RESIZE_WIDTH: int | None = _raw_resize_width if _raw_resize_width > 0 else
 
 RAW_VIDEO_DIR: str = os.getenv("RAW_VIDEO_DIR", "data/raw")
 PROCESSED_FRAMES_DIR: str = os.getenv("PROCESSED_FRAMES_DIR", "data/processed")
+
+# --- Phase 9: AI Football Analyst ---
+
+# Required for scripts/ask_analyst.py. Create a key in Google AI Studio.
+GEMINI_API_KEY: str | None = os.getenv("GEMINI_API_KEY")
+
+# Default model for the AI Analyst. Can be overridden per-call with --model.
+# Model names change over time - if you get a "model not found" error,
+# check Google's current model list: https://ai.google.dev/gemini-api/docs/models
+LLM_MODEL: str = os.getenv("LLM_MODEL", "gemini-3-flash-preview")
